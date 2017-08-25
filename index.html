@@ -1,455 +1,465 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Julien Tanguy">
 
-    <title></title>
+        <title>Julien Tanguy - Curriculum vitæ</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css' rel='stylesheet' type='text/css'>
 
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
-    <style>
-    body {
-        color: #353132;
-        font-family: 'Open Sans', sans-serif;
-        background: #EBEAEA;
-        font-size: 14px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .cv {
-        padding: 80px;
-        background: #FFF;
-        margin: 0 auto;
-        max-width: 827px;
-    }
-
-    .cv-header {
-        display: flex;
-        position: relative;
-        padding: 0 200px 0 0;
-        margin: 0 0 10px 0;
-    }
-
-    .cv-header .fa {
-        width: 15px;
-        text-align: center;
-        margin: 0 5px 0 0;
-    }
-
-    .cv-header__label {
-        background: #EBEAEA;
-        position: absolute;
-        top: 0;
-        right: -80px;
-        padding: 7px 10px;
-        width: 200px;
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: 400;
-        margin: 0;
-    }
-
-    .cv-header__picture {
-        width: 145px;
-        height: 145px;
-        margin: 0 25px 0 0;
-    }
-
-    .cv-header__infos {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .cv-header__name {
-        font-weight: 600;
-        font-size: 15px;
-        margin: 0 0 5px;
-    }
-
-    .cv-header__address,
-    .cv-header__city,
-    .cv-header__born {
-        margin: 0;
-    }
-
-    .cv-header__address {
-
-    }
-
-    .cv-header__city {
-        padding: 0 0 0 20px;
-        margin: 0 0 5px;
-    }
-
-    .cv-header__phone,
-    .cv-header__email,
-    .cv-header__linkedin,
-    .cv-header__twitter {
-        text-decoration: none;
-    }
-
-    .cv-header__phone,
-    .cv-header__linkedin,
-    .cv-header__twitter {
-        color: #353132;
-    }
-
-    .cv-header__phone .fa {
-        font-size: 18px;
-        vertical-align: middle;
-    }
-
-    .cv-header__email {
-        /*color: #4398D9;*/
-        color: #489BDA;
-    }
-
-    .cv-header__email .fa {
-        color: #353132;
-        font-size: 12px;
-    }
-    
-    .cv-header__born {
-        margin: auto 0 0;
-    }
-
-
-    .cv-section {
-        margin: 50px 0 0;
-    }
-
-    .cv-section > h1 {
-        font-size: 25px;
-        font-weight: 300;
-        margin: 0 0 30px;
-        text-transform: uppercase;
-    }
-
-
-    .cv-section--pro {
-        margin: 60px 0 0;
-    }
-
-    .cv-experiences {
-        padding: 0 0 0 110px;
-        position: relative;
-        list-style: none;
-    }
-
-    .cv-experiences__item {
-        border-left: 1px dotted #929091;
-        padding: 4px 0 0 25px;
-    }
-    .cv-experiences__item:not(:last-child) {
-        padding-bottom: 22px;
-    }
-    .cv-experiences__item::before {
-        content: "";
-        background: #868384;
-        width: 11px;
-        height: 11px;
-        display: block;
-        position: absolute;
-        left: 110px;
-        border-radius: 50%;
-        margin: 4px 0 0 -5px;
-    }
-    .cv-experiences__date {
-        left: 0;
-        position: absolute;
-        font-size: 15px;
-        font-weight: 600;
-    }
-
-    .cv-experiences__date-end {
-        display: block;
-    }
-
-    .cv-experiences__title {
-        color: #4398D9;
-        font-weight: 700;
-        font-size: 17px;
-        margin: 0 0 5px;
-    }
-
-    .cv-experiences__title > small {
-        color: #7C7A7A;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: 15px;
-    }
-
-    .cv-experiences__function {
-        font-weight: 600;
-        font-size: 17px;
-        margin: 0 0 5px;
-    }
-
-    .cv-experiences__function > small {
-        color: #8D8A8B;
-        font-weight: 400;
-        font-size: 14px;
-    }
-
-    ul.cv-experiences__description {
-        list-style: none;
-        padding: 0;
-    }
-
-    p.cv-experiences__description {
-        margin: 0;
-    }
-
-    .cv-experiences__description-item {
-
-    }
-    .cv-experiences__description-item:before {
-        content: '- ';
-    }
-
-    .cv-others__item {
-        margin: 0 0 5px;
-    }
-
-    .cv-others__item span {
-        text-transform: uppercase;
-        color: #7C7A7A;
-        font-weight: 600;
-        font-size: 15px;
-    }
-
-    @page {
-        margin: 80px 0 40px;
-        padding: 0 0 80px;
-        size: A4 portrait;
-
-        @bottom-center {
-            content: element(pageFooter);
-        }
-    }
-
-    .cv-footer {
-        display: none;
-    }
-
-    @media print {
+        <style>
         body {
-            background: #FFF;
+            color: #353132;
+            font-family: 'Open Sans', sans-serif;
+            background: #EBEAEA;
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
         }
 
         .cv {
-            padding: 0 80px;
+            padding: 80px;
+            background: #FFF;
+            margin: 0 auto;
+            max-width: 827px;
         }
 
-        .cv-footer {
-            
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 0 80px;
-            line-height: 15px;
-            font-size: 11px;
-            color: #878485;
-            height: 40px;
+        .cv-header {
+            display: flex;
+            position: relative;
+            padding: 0 200px 0 0;
+            margin: 0 0 10px 0;
+        }
+
+        .cv-header .fa {
+            width: 15px;
+            text-align: center;
+            margin: 0 5px 0 0;
+        }
+
+        .cv-header__label {
+            background: #EBEAEA;
+            position: absolute;
+            top: 0;
+            right: -80px;
+            padding: 7px 10px;
+            width: 200px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .cv-header__picture {
+            width: 145px;
+            height: 145px;
+            margin: 0 25px 0 0;
+        }
+
+        .cv-header__infos {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cv-header__name {
+            font-weight: 600;
+            font-size: 15px;
+            margin: 0 0 5px;
+        }
+
+        .cv-header__address,
+        .cv-header__city,
+        .cv-header__born {
+            margin: 0;
+        }
+
+        .cv-header__address {
+
+        }
+
+        .cv-header__city {
+            padding: 0 0 0 20px;
+            margin: 0 0 5px;
+        }
+
+        .cv-header__phone,
+        .cv-header__email,
+        .cv-header__linkedin,
+        .cv-header__twitter {
+            text-decoration: none;
+        }
+
+        .cv-header__phone,
+        .cv-header__linkedin,
+        .cv-header__twitter {
+            color: #353132;
+        }
+
+        .cv-header__phone .fa {
+            font-size: 18px;
+            vertical-align: middle;
+        }
+
+        .cv-header__email {
+            /*color: #4398D9;*/
+            color: #489BDA;
+        }
+
+        .cv-header__email .fa {
+            color: #353132;
+            font-size: 12px;
+        }
+        
+        .cv-header__born {
+            margin: auto 0 0;
+        }
+
+
+        .cv-section {
+            margin: 50px 0 0;
+        }
+
+        .cv-section > h1 {
+            font-size: 25px;
+            font-weight: 300;
+            margin: 0 0 30px;
+            text-transform: uppercase;
+        }
+
+
+        .cv-section--pro {
+            margin: 60px 0 0;
+        }
+
+        .cv-experiences {
+            padding: 0 0 0 110px;
+            position: relative;
+            list-style: none;
         }
 
         .cv-experiences__item {
-            page-break-inside: avoid;
+            border-left: 1px dotted #929091;
+            padding: 4px 0 0 25px;
         }
-    }
+        .cv-experiences__item:not(:last-child) {
+            padding-bottom: 22px;
+        }
+        .cv-experiences__item::before {
+            content: "";
+            background: #868384;
+            width: 11px;
+            height: 11px;
+            display: block;
+            position: absolute;
+            left: 110px;
+            border-radius: 50%;
+            margin: 4px 0 0 -5px;
+        }
+        .cv-experiences__date {
+            left: 0;
+            position: absolute;
+            font-size: 15px;
+            font-weight: 600;
+        }
 
-    @supports (position: running(pageFooter)) {
+        .cv-experiences__date-end {
+            display: block;
+        }
+
+        .cv-experiences__title {
+            color: #4398D9;
+            font-weight: 700;
+            font-size: 17px;
+            margin: 0 0 5px;
+        }
+
+        .cv-experiences__title > small {
+            color: #7C7A7A;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+
+        .cv-experiences__function {
+            font-weight: 600;
+            font-size: 17px;
+            margin: 0 0 5px;
+        }
+
+        .cv-experiences__function > small {
+            color: #8D8A8B;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        ul.cv-experiences__description {
+            list-style: none;
+            padding: 0;
+        }
+
+        p.cv-experiences__description {
+            margin: 0;
+        }
+
+        .cv-experiences__description-item {
+
+        }
+        .cv-experiences__description-item:before {
+            content: '- ';
+        }
+
+        .cv-others__item {
+            margin: 0 0 5px;
+        }
+
+        .cv-others__item span {
+            text-transform: uppercase;
+            color: #7C7A7A;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        @page {
+            margin: 80px 0 40px;
+            padding: 0 0 80px;
+            size: A4 portrait;
+
+            @bottom-center {
+                content: element(pageFooter);
+            }
+        }
+
         .cv-footer {
-            position: running(pageFooter);
-            display: flex;
+            display: none;
         }
-    }
+
+        @media print {
+            body {
+                background: #FFF;
+            }
+
+            .cv {
+                padding: 0 80px;
+            }
+
+            .cv-footer {
+                
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 0 80px;
+                line-height: 15px;
+                font-size: 11px;
+                color: #878485;
+                height: 40px;
+            }
+
+            .cv-experiences__item {
+                page-break-inside: avoid;
+            }
+        }
+
+        @supports (position: running(pageFooter)) {
+            .cv-footer {
+                position: running(pageFooter);
+                display: flex;
+            }
+        }
 
 
 
-    </style>
-  </head>
+        </style>
+    </head>
 
-  <body >
-    <div class="cv">
-        <header class="cv-header">
-            <h1 class="cv-header__label">Curriculum Vitae</h1>
-            <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/11f/305/1cd70bd.jpg" class="cv-header__picture">
-            <section class="cv-header__infos">
-                <h1 class="cv-header__name">Julien TANGUY</h1>
-                <p class="cv-header__address"><i class="fa fa-map-marker" aria-hidden="true"></i>91 C Rue de Dinan</p>
-                <p class="cv-header__city">
-                35000 Rennes</p>
-                <a href="tel:+33688091066" class="cv-header__phone"><i class="fa fa-mobile" aria-hidden="true"></i>+33 (0)6 88 09 10 66</a>
-                <a href="mailto:contact@julien-tanguy.com" class="cv-header__email"><i class="fa fa-envelope-o" aria-hidden="true"></i>contact@julien-tanguy.com</a>
-                <a href="https://www.linkedin.com/in/julientanguy1/" class="cv-header__linkedin" rel="noopener noreferrer" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
-                <a href="https://twitter.com/julien_tanguy" class="cv-header__twitter" rel="noopener noreferrer" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@julien_tanguy</a>
-                <p class="cv-header__born">30 ans</p>
+    <body>
+        <div class="cv">
+            <header class="cv-header">
+                <h1 class="cv-header__label">Curriculum Vitae</h1>
+                <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/11f/305/1cd70bd.jpg" class="cv-header__picture">
+                <section class="cv-header__infos">
+                    <h1 class="cv-header__name">Julien TANGUY</h1>
+                    <p class="cv-header__address"><i class="fa fa-map-marker" aria-hidden="true"></i>91 C Rue de Dinan</p>
+                    <p class="cv-header__city">
+                    35000 Rennes</p>
+                    <a href="tel:+33688091066" class="cv-header__phone"><i class="fa fa-mobile" aria-hidden="true"></i>+33 (0)6 88 09 10 66</a>
+                    <a href="mailto:contact@julien-tanguy.com" class="cv-header__email"><i class="fa fa-envelope-o" aria-hidden="true"></i>contact@julien-tanguy.com</a>
+                    <a href="https://www.linkedin.com/in/julientanguy1/" class="cv-header__linkedin" rel="noopener noreferrer" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+                    <a href="https://twitter.com/julien_tanguy" class="cv-header__twitter" rel="noopener noreferrer" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@julien_tanguy</a>
+                    <p class="cv-header__born">30 ans</p>
+                </section>
+            </header>
+
+            <section class="cv-section cv-section--pro">
+                <h1>Expérience professionnelle</h1>
+                <ul class="cv-experiences">
+
+                    <li class="cv-experiences__item">
+                        <span class="cv-experiences__date">Avril 2014 ></span>
+                        <h2 class="cv-experiences__title">Alentoor <small>Rennes (FR)</small></h2>
+                        <h3 class="cv-experiences__function">Co-fondateur CTO Associé</h3>
+                        <ul class="cv-experiences__description">
+                            <li class="cv-experiences__description-item">Architecture de l’application (Microservices / REST / Queue)</li>
+                            <li class="cv-experiences__description-item">Développement du frontend (Backbone.js / Marionette.js / Bootstrap / Grunt / Browserify / BEM / CSSNext / PostCSS)</li>
+                            <li class="cv-experiences__description-item">Développement du backend (Python / Pyramid / ZeroMQ / MongoDB / Elasticsearch / Pillow)</li>
+                            <li class="cv-experiences__description-item">Utilisation d’APIs externes (Google Maps / Bing Geocoding / Facebook / LinkedIn / Twitter / adresse.data.gouv.fr)</li>
+                            <li class="cv-experiences__description-item">Administration de 3 serveurs (Nginx / Virtualenv / Supervisor / Gunicorn / Tmux / Git / Bash)</li>
+                            <li class="cv-experiences__description-item">Encadrement d'un alternant de Septembre 2016 à Août 2017</li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-experiences__item">
+                        <span class="cv-experiences__date">Jan. 2014 ><span class="cv-experiences__date-end">Avril 2014</span></span>
+                        <h2 class="cv-experiences__title">Eclypsia <small>Ashford (UK)</small></h2>
+                        <h3 class="cv-experiences__function">Développeur (CDI) <small>Démission pendant la période d’essai</small></h3>
+                        <ul class="cv-experiences__description">
+                            <li class="cv-experiences__description-item">Développement d’une nouvelle version du site</li>
+                            <li class="cv-experiences__description-item">Symfony 2 / PHP5 / MySQL / git</li>
+                            <li class="cv-experiences__description-item">Développement d’un crawler d’annuaire en tâche de fond avec RabbitMq / Service linux</li>
+                            <li class="cv-experiences__description-item">Installation de serveur Debian / Nginx / Webmin / PHP / MySQL</li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-experiences__item">
+                        <span class="cv-experiences__date">Oct. 2013 ><span class="cv-experiences__date-end">Nov. 2013</span></span>
+                        <h2 class="cv-experiences__title">Golden Pixel <small>Ploemeur (FR)</small></h2>
+                        <h3 class="cv-experiences__function">Développeur (CDD)</h3>
+                        <ul class="cv-experiences__description">
+                            <li class="cv-experiences__description-item">Développement d’un espace publicitaire couplé à un jeu avec lots</li>
+                            <li class="cv-experiences__description-item">Ajout de fonctionnalités sur un script million dollar pixel</li>
+                            <li class="cv-experiences__description-item">Installation d’un serveur Linux / Nginx / PHP / MySQL</li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-experiences__item">
+                        <span class="cv-experiences__date">Août. 2012 ><span class="cv-experiences__date-end">Juil. 2013</span></span>
+                        <h2 class="cv-experiences__title">Advanseez <small>Rennes (FR)</small></h2>
+                        <h3 class="cv-experiences__function">Développeur (CDI) <small>Licencié économique</small></h3>
+                        <ul class="cv-experiences__description">
+                            <li class="cv-experiences__description-item">Réalisation de maquettes à l’aide d’un PSD de base, de Photoshop et d’Invision</li>
+                            <li class="cv-experiences__description-item">Prototypage HTML / CSS avec Bootstrap</li>
+                            <li class="cv-experiences__description-item">Développement du frontend Javascript à l’aide de Backbone.js / Marionette.js / Underscore.js /
+        jQuery</li>
+                            <li class="cv-experiences__description-item">Conception du backend Python avec Flask (RESTful) et MongoDB</li>
+                            <li class="cv-experiences__description-item">Écriture d’un script de build en BASH et Python</li>
+                            <li class="cv-experiences__description-item">Utilisation d’un wiki, Redmine, Eclipse, Git, Sphinx, méthodologie SCRUM / TDD</li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-experiences__item">
+                        <span class="cv-experiences__date">Jan. 2011 ><span class="cv-experiences__date-end">Mars. 2012</span></span>
+                        <h2 class="cv-experiences__title">S-Cube <small>Bangkok (TH)</small></h2>
+                        <h3 class="cv-experiences__function">Team Leader (Stage + CDD 6 mois)</h3>
+                        <ul class="cv-experiences__description">
+                            <li class="cv-experiences__description-item">Communication avec le client par téléphone ou email</li>
+                            <li class="cv-experiences__description-item">Analyse de la demande du client et en écrire une spécification technique</li>
+                            <li class="cv-experiences__description-item">Correction de bugs sur des sites en production et y intégrer des évolutions</li>
+                            <li class="cv-experiences__description-item">Gestion d’une équipe de 2 développeurs thaïlandais et 3 malgaches sur un projet offshore</li>
+                            <li class="cv-experiences__description-item">Développement de sites e-commerces / vitrines avec CakePHP</li>
+                            <li class="cv-experiences__description-item">Utilisation d’API «Point Relay», Facebook et Twitter ; SVN, PHP, jQuery, JSON, XML, Webservices</li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-experiences__item">
+                        <span class="cv-experiences__date">Juin 2004 ><span class="cv-experiences__date-end">Sept. 2010</span></span>
+                        <h2 class="cv-experiences__title">FC Lorient <small>Lorient (FR)</small></h2>
+                        <h3 class="cv-experiences__function">Développeur (CDD + Intérim + Bénévolat)</h3>
+                        <ul class="cv-experiences__description">
+                            <li class="cv-experiences__description-item">Développement d’une structure PHP (sans framework dans un premier temps) et MYSQL</li>
+                            <li class="cv-experiences__description-item">Installation et utilisation d’un serveur dédié (LAMP)</li>
+                            <li class="cv-experiences__description-item">Réalisation de trois designs (2005, 2006, 2007)</li>
+                            <li class="cv-experiences__description-item">Mise en place de trois nouvelles interfaces faites par un webdesigner (2008, 2009, 2010)</li>
+                            <li class="cv-experiences__description-item">Utilisation de Symfony pour la dernière version (2010)</li>
+                            <li class="cv-experiences__description-item">Reengineering de la base de donnée et migration des données (avec Symfony)</li>
+                            <li class="cv-experiences__description-item">Dialogue avec la cellule communication et le graphiste</li>
+                            <li class="cv-experiences__description-item">Outil de communication de qualité</li>
+                            <li class="cv-experiences__description-item">WebTV (Technologie Flash) et WebRadio (Icecast)</li>
+                            <li class="cv-experiences__description-item">1 334 533 de pages vues pour le mois de Janvier 2010</li>
+                        </ul>
+                    </li>
+
+                    <li class="cv-experiences__item">
+                        <span class="cv-experiences__date">Avril 2008 ><span class="cv-experiences__date-end">Juillet 2008</span></span>
+                        <h2 class="cv-experiences__title">Cyberlogic <small>Montréal (CA)</small></h2>
+                        <h3 class="cv-experiences__function">Stage</h3>
+                        <ul class="cv-experiences__description">
+                            <li class="cv-experiences__description-item">Développement d’un extranet pour les clients de l’entreprise</li>
+                            <li class="cv-experiences__description-item">Site interactif utilisant CodeIgniter et JQuery</li>
+                            <li class="cv-experiences__description-item">Consultation des factures au format PDF, Gestion des comptes avec différents droits / accès, i18n</li>
+                        </ul>
+                    </li>
+
+                </ul>
             </section>
-        </header>
 
-        <section class="cv-section cv-section--pro">
-            <h1>Expérience professionnelle</h1>
-            <ul class="cv-experiences">
+            <section class="cv-section cv-section--formation">
+                <h1>Formation</h1>
+                <ul class="cv-experiences">
 
-                <li class="cv-experiences__item">
-                    <span class="cv-experiences__date">Avril 2014 ></span>
-                    <h2 class="cv-experiences__title">Alentoor <small>Rennes (FR)</small></h2>
-                    <h3 class="cv-experiences__function">Co-fondateur CTO Associé</h3>
-                    <ul class="cv-experiences__description">
-                        <li class="cv-experiences__description-item">Architecture de l’application (Microservices / REST / Queue)</li>
-                        <li class="cv-experiences__description-item">Développement du frontend (Backbone.js / Marionette.js / Bootstrap / Grunt / Browserify / BEM / CSSNext / PostCSS)</li>
-                        <li class="cv-experiences__description-item">Développement du backend (Python / Pyramid / ZeroMQ / MongoDB / Elasticsearch / Pillow)</li>
-                        <li class="cv-experiences__description-item">Utilisation d’APIs externes (Google Maps / Bing Geocoding / Facebook / LinkedIn / Twitter / adresse.data.gouv.fr)</li>
-                        <li class="cv-experiences__description-item">Administration de 3 serveurs (Nginx / Virtualenv / Supervisor / Gunicorn / Tmux / Git / Bash)</li>
-                        <li class="cv-experiences__description-item">Encadrement d'un alternant de Septembre 2016 à Août 2017</li>
-                    </ul>
-                </li>
+                    <li class="cv-experiences__item">
+                        <span class="cv-experiences__date">2009 ><span class="cv-experiences__date-end">2011</span></span>
+                        <h2 class="cv-experiences__title">Master Image et Réseaux <small>Université Bretagne Sud (Vannes)</small></h2>
+                        <p class="cv-experiences__description">
+        Imagerie 2D, 3D / OpenGL / Concurrence / Intergiciel (OSGI, Axis, JMS, EJB) / Systèmes distribués
+        (NIO, Hadoop, MPJ) / Réseau sans fil (Wifi, Bluetooth, Zigbee) / Administration système et réseau /
+        Indexation de données textuelles / Sécurité informatique / Architecture des systèmes
+                        </p>
+                    </li>
 
-                <li class="cv-experiences__item">
-                    <span class="cv-experiences__date">Jan. 2014 ><span class="cv-experiences__date-end">Avril 2014</span></span>
-                    <h2 class="cv-experiences__title">Eclypsia <small>Ashford (UK)</small></h2>
-                    <h3 class="cv-experiences__function">Développeur (CDI) <small>Démission pendant la période d’essai</small></h3>
-                    <ul class="cv-experiences__description">
-                        <li class="cv-experiences__description-item">Développement d’une nouvelle version du site</li>
-                        <li class="cv-experiences__description-item">Symfony 2 / PHP5 / MySQL / git</li>
-                        <li class="cv-experiences__description-item">Développement d’un crawler d’annuaire en tâche de fond avec RabbitMq / Service linux</li>
-                        <li class="cv-experiences__description-item">Installation de serveur Debian / Nginx / Webmin / PHP / MySQL</li>
-                    </ul>
-                </li>
-
-                <li class="cv-experiences__item">
-                    <span class="cv-experiences__date">Oct. 2013 ><span class="cv-experiences__date-end">Nov. 2013</span></span>
-                    <h2 class="cv-experiences__title">Golden Pixel <small>Ploemeur (FR)</small></h2>
-                    <h3 class="cv-experiences__function">Développeur (CDD)</h3>
-                    <ul class="cv-experiences__description">
-                        <li class="cv-experiences__description-item">Développement d’un espace publicitaire couplé à un jeu avec lots</li>
-                        <li class="cv-experiences__description-item">Ajout de fonctionnalités sur un script million dollar pixel</li>
-                        <li class="cv-experiences__description-item">Installation d’un serveur Linux / Nginx / PHP / MySQL</li>
-                    </ul>
-                </li>
-
-                <li class="cv-experiences__item">
-                    <span class="cv-experiences__date">Août. 2012 ><span class="cv-experiences__date-end">Juil. 2013</span></span>
-                    <h2 class="cv-experiences__title">Advanseez <small>Rennes (FR)</small></h2>
-                    <h3 class="cv-experiences__function">Développeur (CDI) <small>Licencié économique</small></h3>
-                    <ul class="cv-experiences__description">
-                        <li class="cv-experiences__description-item">Réalisation de maquettes à l’aide d’un PSD de base, de Photoshop et d’Invision</li>
-                        <li class="cv-experiences__description-item">Prototypage HTML / CSS avec Bootstrap</li>
-                        <li class="cv-experiences__description-item">Développement du frontend Javascript à l’aide de Backbone.js / Marionette.js / Underscore.js /
-    jQuery</li>
-                        <li class="cv-experiences__description-item">Conception du backend Python avec Flask (RESTful) et MongoDB</li>
-                        <li class="cv-experiences__description-item">Écriture d’un script de build en BASH et Python</li>
-                        <li class="cv-experiences__description-item">Utilisation d’un wiki, Redmine, Eclipse, Git, Sphinx, méthodologie SCRUM / TDD</li>
-                    </ul>
-                </li>
-
-                <li class="cv-experiences__item">
-                    <span class="cv-experiences__date">Jan. 2011 ><span class="cv-experiences__date-end">Mars. 2012</span></span>
-                    <h2 class="cv-experiences__title">S-Cube <small>Bangkok (TH)</small></h2>
-                    <h3 class="cv-experiences__function">Team Leader (Stage + CDD 6 mois)</h3>
-                    <ul class="cv-experiences__description">
-                        <li class="cv-experiences__description-item">Communication avec le client par téléphone ou email</li>
-                        <li class="cv-experiences__description-item">Analyse de la demande du client et en écrire une spécification technique</li>
-                        <li class="cv-experiences__description-item">Correction de bugs sur des sites en production et y intégrer des évolutions</li>
-                        <li class="cv-experiences__description-item">Gestion d’une équipe de 2 développeurs thaïlandais et 3 malgaches sur un projet offshore</li>
-                        <li class="cv-experiences__description-item">Développement de sites e-commerces / vitrines avec CakePHP</li>
-                        <li class="cv-experiences__description-item">Utilisation d’API «Point Relay», Facebook et Twitter ; SVN, PHP, jQuery, JSON, XML, Webservices</li>
-                    </ul>
-                </li>
-
-                <li class="cv-experiences__item">
-                    <span class="cv-experiences__date">Juin 2004 ><span class="cv-experiences__date-end">Sept. 2010</span></span>
-                    <h2 class="cv-experiences__title">FC Lorient <small>Lorient (FR)</small></h2>
-                    <h3 class="cv-experiences__function">Développeur (CDD + Intérim + Bénévolat)</h3>
-                    <ul class="cv-experiences__description">
-                        <li class="cv-experiences__description-item">Développement d’une structure PHP (sans framework dans un premier temps) et MYSQL</li>
-                        <li class="cv-experiences__description-item">Installation et utilisation d’un serveur dédié (LAMP)</li>
-                        <li class="cv-experiences__description-item">Réalisation de trois designs (2005, 2006, 2007)</li>
-                        <li class="cv-experiences__description-item">Mise en place de trois nouvelles interfaces faites par un webdesigner (2008, 2009, 2010)</li>
-                        <li class="cv-experiences__description-item">Utilisation de Symfony pour la dernière version (2010)</li>
-                        <li class="cv-experiences__description-item">Reengineering de la base de donnée et migration des données (avec Symfony)</li>
-                        <li class="cv-experiences__description-item">Dialogue avec la cellule communication et le graphiste</li>
-                        <li class="cv-experiences__description-item">Outil de communication de qualité</li>
-                        <li class="cv-experiences__description-item">WebTV (Technologie Flash) et WebRadio (Icecast)</li>
-                        <li class="cv-experiences__description-item">1 334 533 de pages vues pour le mois de Janvier 2010</li>
-                    </ul>
-                </li>
-
-                <li class="cv-experiences__item">
-                    <span class="cv-experiences__date">Avril 2008 ><span class="cv-experiences__date-end">Juillet 2008</span></span>
-                    <h2 class="cv-experiences__title">Cyberlogic <small>Montréal (CA)</small></h2>
-                    <h3 class="cv-experiences__function">Stage</h3>
-                    <ul class="cv-experiences__description">
-                        <li class="cv-experiences__description-item">Développement d’un extranet pour les clients de l’entreprise</li>
-                        <li class="cv-experiences__description-item">Site interactif utilisant CodeIgniter et JQuery</li>
-                        <li class="cv-experiences__description-item">Consultation des factures au format PDF, Gestion des comptes avec différents droits / accès, i18n</li>
-                    </ul>
-                </li>
-
-            </ul>
-        </section>
-
-        <section class="cv-section cv-section--formation">
-            <h1>Formation</h1>
-            <ul class="cv-experiences">
-
-                <li class="cv-experiences__item">
-                    <span class="cv-experiences__date">2009 ><span class="cv-experiences__date-end">2011</span></span>
-                    <h2 class="cv-experiences__title">Master Image et Réseaux <small>Université Bretagne Sud (Vannes)</small></h2>
-                    <p class="cv-experiences__description">
-    Imagerie 2D, 3D / OpenGL / Concurrence / Intergiciel (OSGI, Axis, JMS, EJB) / Systèmes distribués
-    (NIO, Hadoop, MPJ) / Réseau sans fil (Wifi, Bluetooth, Zigbee) / Administration système et réseau /
-    Indexation de données textuelles / Sécurité informatique / Architecture des systèmes
-                    </p>
-                </li>
-
-                <li class="cv-experiences__item">
-                    <span class="cv-experiences__date">2006 ><span class="cv-experiences__date-end">2009</span></span>
-                    <h2 class="cv-experiences__title">DUT + L3 Informatique <small>Université Bretagne Sud (Vannes)</small></h2>
-                    <p class="cv-experiences__description">
-    UML / Oracle (Optimisation) / PHP / C++ / C / Réseau (TCP, IP, ICMP, Ethernet, UDP, ARP) / Compilation
-    / Gestion de projet / SQL / Python / Java/ JSP / XHTML / CSS / Projet web / Javascript / Projets
-    (Applications en C++, J2ME)
-                    </p>
-                </li>
+                    <li class="cv-experiences__item">
+                        <span class="cv-experiences__date">2006 ><span class="cv-experiences__date-end">2009</span></span>
+                        <h2 class="cv-experiences__title">DUT + L3 Informatique <small>Université Bretagne Sud (Vannes)</small></h2>
+                        <p class="cv-experiences__description">
+        UML / Oracle (Optimisation) / PHP / C++ / C / Réseau (TCP, IP, ICMP, Ethernet, UDP, ARP) / Compilation
+        / Gestion de projet / SQL / Python / Java/ JSP / XHTML / CSS / Projet web / Javascript / Projets
+        (Applications en C++, J2ME)
+                        </p>
+                    </li>
 
 
 
-                <li class="cv-experiences__item">
-                    <span class="cv-experiences__date">2004 ><span class="cv-experiences__date-end">2006</span></span>
-                    <h2 class="cv-experiences__title">Bac STI Électronique <small>Lycée Colbert (Lorient)</small></h2>
-                    <p class="cv-experiences__description">
-    Mécanique / Électronique / Physique Appliquée / Projet de 4 mois sur un ouvre portail SOMFY
-                    </p>
-                </li>
+                    <li class="cv-experiences__item">
+                        <span class="cv-experiences__date">2004 ><span class="cv-experiences__date-end">2006</span></span>
+                        <h2 class="cv-experiences__title">Bac STI Électronique <small>Lycée Colbert (Lorient)</small></h2>
+                        <p class="cv-experiences__description">
+        Mécanique / Électronique / Physique Appliquée / Projet de 4 mois sur un ouvre portail SOMFY
+                        </p>
+                    </li>
 
-            </ul>
-        </section>
+                </ul>
+            </section>
 
-        <section class="cv-section cv-section--others">
-            <h1>Divers</h1>
-            <p class="cv-others__item"><span>Langues : </span>Anglais : niveau intermédiaire / Thaïlandais : notions</p>
-            <p class="cv-others__item"><span>Loisirs : </span>Vélo, Escalade, Jogging, Football, Internet, Cinéma, Musique, Festivals, Concerts, Voyages</p>
-        </section>
+            <section class="cv-section cv-section--others">
+                <h1>Divers</h1>
+                <p class="cv-others__item"><span>Langues : </span>Anglais : niveau intermédiaire / Thaïlandais : notions</p>
+                <p class="cv-others__item"><span>Loisirs : </span>Vélo, Escalade, Jogging, Football, Internet, Cinéma, Musique, Festivals, Concerts, Voyages</p>
+            </section>
 
-    </div>
+        </div>
 
-    <div class="cv-footer">
-        <div class="cv-footer__left">Curriculum Vitae - Julien TANGUY</div>
-        <div class="cv-footer__right"></div>
-    </div>
+        <div class="cv-footer">
+            <div class="cv-footer__left">Curriculum Vitae - Julien TANGUY</div>
+            <div class="cv-footer__right"></div>
+        </div>
 
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  </body>
+          ga('create', 'UA-105341393-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+
+    </body>
 </html>
