@@ -281,19 +281,25 @@
     </head>
 
     <body>
-        <div class="cv">
+        <div class="cv" itemscope itemtype="http://schema.org/Person">
             <header class="cv-header">
                 <h1 class="cv-header__label">Curriculum Vitae</h1>
                 <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/11f/305/1cd70bd.jpg" class="cv-header__picture">
                 <section class="cv-header__infos">
-                    <h1 class="cv-header__name">Julien TANGUY</h1>
-                    <p class="cv-header__address"><i class="fa fa-map-marker" aria-hidden="true"></i>91 C Rue de Dinan</p>
-                    <p class="cv-header__city">
-                    35000 Rennes</p>
-                    <a href="tel:+33688091066" class="cv-header__phone"><i class="fa fa-mobile" aria-hidden="true"></i>+33 (0)6 88 09 10 66</a>
-                    <a href="mailto:contact@julien-tanguy.com" class="cv-header__email"><i class="fa fa-envelope-o" aria-hidden="true"></i>contact@julien-tanguy.com</a>
-                    <a href="https://www.linkedin.com/in/julientanguy1/" class="cv-header__linkedin" rel="noopener noreferrer" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
-                    <a href="https://twitter.com/julien_tanguy" class="cv-header__twitter" rel="noopener noreferrer" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@julien_tanguy</a>
+                    <h1 class="cv-header__name"><span itemprop="givenName">Julien</span> <span itemprop="familyName">TANGUY</span></h1>
+
+                    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <p class="cv-header__address" itemprop="streetAddress"><i class="fa fa-map-marker" aria-hidden="true"></i>91 C Rue de Dinan</p>
+                        <p class="cv-header__city">
+                        <span itemprop="postalCode">35000</span> <span itemprop="addressLocality">Rennes</span></p>
+                    </div>
+
+                    <a href="tel:+33688091066" class="cv-header__phone" itemprop="telephone"><i class="fa fa-mobile" aria-hidden="true"></i>+33 (0)6 88 09 10 66</a>
+                    <a href="mailto:contact@julien-tanguy.com" class="cv-header__email" itemprop="email"><i class="fa fa-envelope-o" aria-hidden="true"></i>contact@julien-tanguy.com</a>
+
+                    <a href="https://www.linkedin.com/in/julientanguy1/" class="cv-header__linkedin" rel="noopener noreferrer" target="_blank"><i class="fa fa-linkedin" aria-hidden="true" itemprop="url"></i>LinkedIn</a>
+                    <a href="https://twitter.com/julien_tanguy" class="cv-header__twitter" rel="noopener noreferrer" target="_blank"><i class="fa fa-twitter" aria-hidden="true" itemprop="url"></i>@julien_tanguy</a>
+
                     <p class="cv-header__born">30 ans</p>
                 </section>
             </header>
@@ -304,9 +310,9 @@
 
                     <li class="cv-experiences__item">
                         <span class="cv-experiences__date">Avril 2014 ></span>
-                        <h2 class="cv-experiences__title">Alentoor <small>Rennes (FR)</small></h2>
-                        <h3 class="cv-experiences__function">Co-fondateur CTO Associé</h3>
-                        <ul class="cv-experiences__description">
+                        <h2 class="cv-experiences__title" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization"><span itemprop="legalName">Alentoor</span> <small itemprop="address">Rennes (FR)</small></h2>
+                        <h3 class="cv-experiences__function" itemprop="jobTitle">Co-fondateur CTO Associé</h3>
+                        <ul class="cv-experiences__description" itemprop="description">
                             <li class="cv-experiences__description-item">Architecture de l’application (Microservices / REST / Queue)</li>
                             <li class="cv-experiences__description-item">Développement du frontend (Backbone.js / Marionette.js / Bootstrap / Grunt / Browserify / BEM / CSSNext / PostCSS)</li>
                             <li class="cv-experiences__description-item">Développement du backend (Python / Pyramid / ZeroMQ / MongoDB / Elasticsearch / Pillow)</li>
@@ -318,9 +324,9 @@
 
                     <li class="cv-experiences__item">
                         <span class="cv-experiences__date">Jan. 2014 ><span class="cv-experiences__date-end">Avril 2014</span></span>
-                        <h2 class="cv-experiences__title">Eclypsia <small>Ashford (UK)</small></h2>
-                        <h3 class="cv-experiences__function">Développeur (CDI) <small>Démission pendant la période d’essai</small></h3>
-                        <ul class="cv-experiences__description">
+                        <h2 class="cv-experiences__title" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization"><span itemprop="legalName">Eclypsia</span> <small itemprop="address">Ashford (UK)</small></h2>
+                        <h3 class="cv-experiences__function" itemprop="jobTitle">Développeur (CDI) <small>Démission pendant la période d’essai</small></h3>
+                        <ul class="cv-experiences__description" itemprop="description">
                             <li class="cv-experiences__description-item">Développement d’une nouvelle version du site</li>
                             <li class="cv-experiences__description-item">Symfony 2 / PHP5 / MySQL / git</li>
                             <li class="cv-experiences__description-item">Développement d’un crawler d’annuaire en tâche de fond avec RabbitMq / Service linux</li>
@@ -330,9 +336,9 @@
 
                     <li class="cv-experiences__item">
                         <span class="cv-experiences__date">Oct. 2013 ><span class="cv-experiences__date-end">Nov. 2013</span></span>
-                        <h2 class="cv-experiences__title">Golden Pixel <small>Ploemeur (FR)</small></h2>
-                        <h3 class="cv-experiences__function">Développeur (CDD)</h3>
-                        <ul class="cv-experiences__description">
+                        <h2 class="cv-experiences__title" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization"><span itemprop="legalName">Golden Pixel</span> <small itemprop="address">Ploemeur (FR)</small></h2>
+                        <h3 class="cv-experiences__function" itemprop="jobTitle">Développeur (CDD)</h3>
+                        <ul class="cv-experiences__description" itemprop="description">
                             <li class="cv-experiences__description-item">Développement d’un espace publicitaire couplé à un jeu avec lots</li>
                             <li class="cv-experiences__description-item">Ajout de fonctionnalités sur un script million dollar pixel</li>
                             <li class="cv-experiences__description-item">Installation d’un serveur Linux / Nginx / PHP / MySQL</li>
@@ -341,9 +347,9 @@
 
                     <li class="cv-experiences__item">
                         <span class="cv-experiences__date">Août. 2012 ><span class="cv-experiences__date-end">Juil. 2013</span></span>
-                        <h2 class="cv-experiences__title">Advanseez <small>Rennes (FR)</small></h2>
-                        <h3 class="cv-experiences__function">Développeur (CDI) <small>Licencié économique</small></h3>
-                        <ul class="cv-experiences__description">
+                        <h2 class="cv-experiences__title" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization"><span itemprop="legalName">Advanseez</span> <small itemprop="address">Rennes (FR)</small></h2>
+                        <h3 class="cv-experiences__function" itemprop="jobTitle">Développeur (CDI) <small>Licencié économique</small></h3>
+                        <ul class="cv-experiences__description" itemprop="description">
                             <li class="cv-experiences__description-item">Réalisation de maquettes à l’aide d’un PSD de base, de Photoshop et d’Invision</li>
                             <li class="cv-experiences__description-item">Prototypage HTML / CSS avec Bootstrap</li>
                             <li class="cv-experiences__description-item">Développement du frontend Javascript à l’aide de Backbone.js / Marionette.js / Underscore.js /
@@ -356,9 +362,9 @@
 
                     <li class="cv-experiences__item">
                         <span class="cv-experiences__date">Jan. 2011 ><span class="cv-experiences__date-end">Mars. 2012</span></span>
-                        <h2 class="cv-experiences__title">S-Cube <small>Bangkok (TH)</small></h2>
-                        <h3 class="cv-experiences__function">Team Leader (Stage + CDD 6 mois)</h3>
-                        <ul class="cv-experiences__description">
+                        <h2 class="cv-experiences__title" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization"><span itemprop="legalName">S-Cube</span> <small itemprop="address">Bangkok (TH)</small></h2>
+                        <h3 class="cv-experiences__function" itemprop="jobTitle">Team Leader (Stage + CDD 6 mois)</h3>
+                        <ul class="cv-experiences__description" itemprop="description">
                             <li class="cv-experiences__description-item">Communication avec le client par téléphone ou email</li>
                             <li class="cv-experiences__description-item">Analyse de la demande du client et en écrire une spécification technique</li>
                             <li class="cv-experiences__description-item">Correction de bugs sur des sites en production et y intégrer des évolutions</li>
@@ -370,9 +376,9 @@
 
                     <li class="cv-experiences__item">
                         <span class="cv-experiences__date">Juin 2004 ><span class="cv-experiences__date-end">Sept. 2010</span></span>
-                        <h2 class="cv-experiences__title">FC Lorient <small>Lorient (FR)</small></h2>
-                        <h3 class="cv-experiences__function">Développeur (CDD + Intérim + Bénévolat)</h3>
-                        <ul class="cv-experiences__description">
+                        <h2 class="cv-experiences__title" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization"><span itemprop="legalName">FC Lorient</span> <small itemprop="address">Lorient (FR)</small></h2>
+                        <h3 class="cv-experiences__function" itemprop="jobTitle">Développeur (CDD + Intérim + Bénévolat)</h3>
+                        <ul class="cv-experiences__description" itemprop="description">
                             <li class="cv-experiences__description-item">Développement d’une structure PHP (sans framework dans un premier temps) et MYSQL</li>
                             <li class="cv-experiences__description-item">Installation et utilisation d’un serveur dédié (LAMP)</li>
                             <li class="cv-experiences__description-item">Réalisation de trois designs (2005, 2006, 2007)</li>
@@ -388,9 +394,9 @@
 
                     <li class="cv-experiences__item">
                         <span class="cv-experiences__date">Avril 2008 ><span class="cv-experiences__date-end">Juillet 2008</span></span>
-                        <h2 class="cv-experiences__title">Cyberlogic <small>Montréal (CA)</small></h2>
-                        <h3 class="cv-experiences__function">Stage</h3>
-                        <ul class="cv-experiences__description">
+                        <h2 class="cv-experiences__title" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization"><span itemprop="legalName">Cyberlogic</span> <small itemprop="address">Montréal (CA)</small></h2>
+                        <h3 class="cv-experiences__function" itemprop="jobTitle">Développeur (Stage)</h3>
+                        <ul class="cv-experiences__description" itemprop="description">
                             <li class="cv-experiences__description-item">Développement d’un extranet pour les clients de l’entreprise</li>
                             <li class="cv-experiences__description-item">Site interactif utilisant CodeIgniter et JQuery</li>
                             <li class="cv-experiences__description-item">Consultation des factures au format PDF, Gestion des comptes avec différents droits / accès, i18n</li>
