@@ -11,7 +11,9 @@
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css' rel='stylesheet' type='text/css'>
+
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
     <style>
     body {
@@ -35,6 +37,12 @@
         position: relative;
         padding: 0 200px 0 0;
         margin: 0 0 10px 0;
+    }
+
+    .cv-header .fa {
+        width: 15px;
+        text-align: center;
+        margin: 0 5px 0 0;
     }
 
     .cv-header__label {
@@ -79,16 +87,26 @@
     }
 
     .cv-header__city {
-
+        padding: 0 0 0 20px;
+        margin: 0 0 5px;
     }
 
     .cv-header__phone,
-    .cv-header__email {
+    .cv-header__email,
+    .cv-header__linkedin,
+    .cv-header__twitter {
         text-decoration: none;
     }
 
-    .cv-header__phone {
+    .cv-header__phone,
+    .cv-header__linkedin,
+    .cv-header__twitter {
         color: #353132;
+    }
+
+    .cv-header__phone .fa {
+        font-size: 18px;
+        vertical-align: middle;
     }
 
     .cv-header__email {
@@ -96,6 +114,11 @@
         color: #489BDA;
     }
 
+    .cv-header__email .fa {
+        color: #353132;
+        font-size: 12px;
+    }
+    
     .cv-header__born {
         margin: auto 0 0;
     }
@@ -264,10 +287,13 @@
             <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/11f/305/1cd70bd.jpg" class="cv-header__picture">
             <section class="cv-header__infos">
                 <h1 class="cv-header__name">Julien TANGUY</h1>
-                <p class="cv-header__address">91 C Rue de Dinan</p>
-                <p class="cv-header__city">35000 Rennes</p>
-                <a href="tel:+33688091066" class="cv-header__phone">Tél. +33 (0)6 88 09 10 66</a>
-                <a href="mailto:contact@julien-tanguy.com<" class="cv-header__email">contact@julien-tanguy.com</a>
+                <p class="cv-header__address"><i class="fa fa-map-marker" aria-hidden="true"></i>91 C Rue de Dinan</p>
+                <p class="cv-header__city">
+                35000 Rennes</p>
+                <a href="tel:+33688091066" class="cv-header__phone"><i class="fa fa-mobile" aria-hidden="true"></i>+33 (0)6 88 09 10 66</a>
+                <a href="mailto:contact@julien-tanguy.com" class="cv-header__email"><i class="fa fa-envelope-o" aria-hidden="true"></i>contact@julien-tanguy.com</a>
+                <a href="https://www.linkedin.com/in/julientanguy1/" class="cv-header__linkedin" rel="noopener noreferrer" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+                <a href="https://twitter.com/julien_tanguy" class="cv-header__twitter" rel="noopener noreferrer" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@julien_tanguy</a>
                 <p class="cv-header__born">30 ans</p>
             </section>
         </header>
